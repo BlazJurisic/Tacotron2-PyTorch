@@ -12,7 +12,7 @@ from utils.audio import save_wav, inv_melspectrogram
 def load_model(ckpt_pth):
     ckpt_dict = torch.load(ckpt_pth)
     model = Tacotron2()
-    model.load_state_dict(ckpt_dict['model'])
+    model.load_state_dict(ckpt_dict['state_dict'])
     model = mode(model, True).eval()
     return model
 
