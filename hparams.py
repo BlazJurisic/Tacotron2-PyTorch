@@ -7,7 +7,7 @@ class hparams:
     ################################
     # Data Parameters              #
     ################################
-    text_cleaners=['english_cleaners']
+    text_cleaners=['basic_cleaners']
 
     ################################
     # Audio                        #
@@ -56,13 +56,13 @@ class hparams:
     encoder_embedding_dim = 512
 
     # Decoder parameters
-    n_frames_per_step = 3
+    n_frames_per_step = 1
     decoder_rnn_dim = 1024
     prenet_dim = 256
-    max_decoder_ratio = 10
+    max_decoder_ratio = 1000
     gate_threshold = 0.5
-    p_attention_dropout = 0.1
-    p_decoder_dropout = 0.1
+    p_attention_dropout = 0.3
+    p_decoder_dropout = 0.3
 
     # Attention parameters
     attention_rnn_dim = 1024
